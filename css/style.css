@@ -1,0 +1,16 @@
+body {
+  background-color: rgba(128, 125, 125, 0.475);
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+footer {
+  color: white;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 20px;
+}
