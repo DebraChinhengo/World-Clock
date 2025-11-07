@@ -1,16 +1,27 @@
 body {
   background-color: rgb(201, 192, 187);
+  font-family: "Segoe UI Emoji", "Segoe UI", "Apple Color Emoji",
+    "Noto Color Emoji", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 h1 {
   color: white;
   text-align: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: inherit;
+}
+
+select {
+  font-family: inherit;
+  font-size: 1em;
+}
+
+.city {
+  font-family: inherit;
 }
 
 footer {
   color: white;
   text-align: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: inherit;
   margin-top: 20px;
 }
