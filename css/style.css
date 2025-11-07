@@ -1,18 +1,63 @@
 body {
-  background-color: rgb(201, 192, 187);
-  font-family: "Segoe UI Emoji", "Segoe UI", "Apple Color Emoji",
-    "Noto Color Emoji", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #d6dbd6;
+  font-family: "Faculty Glyphic", sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: whitesmoke;
+  padding: 50px;
+  margin: 60px auto;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  font-family: "Faculty Glyphic", sans-serif;
+  font-weight: 400;
+}
+
+.city {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0;
+}
+.date {
+  opacity: 0.7;
+  border-bottom: 2px dashed #585858;
+  margin-bottom: 60px;
+}
+
+.dateLast {
+  opacity: 0.7;
+  margin-bottom: 60px;
+}
+.time {
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.time small {
+  font-size: 12px;
+  font-weight: normal;
+  vertical-align: middle;
+  font-weight: bold;
 }
 
 h1 {
-  color: white;
+  color: rgb(22, 22, 22);
   text-align: center;
   font-family: inherit;
+  font-size: 40px;
+}
+
+h2 {
+  margin: 0;
 }
 
 select {
   font-family: inherit;
   font-size: 1em;
+  margin-bottom: 30px;
 }
 
 .city {
@@ -20,8 +65,17 @@ select {
 }
 
 footer {
-  color: white;
+  color: rgb(15, 15, 15);
   text-align: center;
   font-family: inherit;
   margin-top: 20px;
+}
+
+select {
+  font-family: inherit;
+  font-size: 1em;
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  padding: 8px;
 }
