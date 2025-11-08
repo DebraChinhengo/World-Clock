@@ -14,39 +14,44 @@
   <body>
     <div class="container">
       <h1>World Clock</h1>
-           <select>
+           <select id = "selectcity">
         <option value="">Select a city... 🌍</option>
-        <option value="">Abidjan 🇨🇮</option>
-        <option value="">Addis Ababa 🇪🇹</option>
-        <option value="">Auckland 🇳🇿</option>
-        <option value="">Bamako 🇲🇱</option>
-        <option value="">Brisbane 🇦🇺</option>
-        <option value="">Cairo 🇪🇬</option>
-        <option value="">Dar es Salaam 🇹🇿</option>
-        <option value="">Denpasar 🇮🇩</option>
-        <option value="">Freetown 🇸🇱</option>
-        <option value="">Guangzhou 🇨🇳</option>
-        <option value="">Ho Chi Minh City 🇻🇳</option>
-        <option value="">Johannesburg 🇿🇦</option>
-        <option value="">Kuala Lumpur 🇲🇾</option>
-        <option value="">Lagos 🇳🇬</option>
-        <option value="">Manila 🇵🇭</option>
-        <option value="">Mumbai 🇮🇳</option>
-        <option value="">Nairobi 🇰🇪</option>
-        <option value="">N'Djamena 🇹🇩</option>
-        <option value="">Ouagadougou 🇧🇫</option>
-        <option value="">Osaka 🇯🇵</option>
-        <option value="">Port Louis 🇲🇺</option>
-        <option value="">Port Moresby 🇵🇬</option>
-        <option value="">São Tomé 🇸🇹</option>
-        <option value="">Seoul 🇰🇷</option>
-        <option value="">Singapore 🇸🇬</option>
-        <option value="">Taipei 🇹🇼</option>
-        <option value="">Tripoli 🇱🇾</option>
-        <option value="">Windhoek 🇳🇦</option>
-        <option value="">Yaoundé 🇨🇲</option>
+        <option value="Africa/Abidjan">Abidjan 🇨🇮</option>
+        <option value="Africa/Addis_Ababa">Addis Ababa 🇪🇹</option>
+        <option value="Pacific/Auckland">Auckland 🇳🇿</option>
+        <option value="Africa/Bamako">Bamako 🇲🇱</option>
+        <option value="Australia/Queensland">Brisbane 🇦🇺</option>
+        <option value="Africa/Cairo">Cairo 🇪🇬</option>
+        <option value="Africa/Dar_es_Salaam">Dar es Salaam 🇹🇿</option>
+        <option value="Asia/Makassar">Denpasar 🇮🇩</option>
+        <option value="Africa/Freetown">Freetown 🇸🇱</option>
+        <option value="Asia/Shanghai">Guangzhou 🇨🇳</option>
+       <option value="Africa/Gaborone">Gaborone 🇧🇼</option>
+        <option value="Africa/Harare">Harare 🇿🇼</option>
+        <option value="Asia/Ho_Chi_Minh">Ho Chi Minh City 🇻🇳</option>
+        <option value="Africa/Johannesburg">Johannesburg 🇿🇦</option>
+        <option value="Asia/Kuala_Lumpur">Kuala Lumpur 🇲🇾</option>
+        <option value="Africa/Lagos">Lagos 🇳🇬</option>
+        <option value="Africa/Malabo">Malabo 🇬🇶</option>
+        <option value="Asia/Manila">Manila 🇵🇭</option>
+        <option value="Africa/Maputo">Maputo 🇲🇿</option>
+        <option value="Asia/Kolkata">Mumbai 🇮🇳</option>
+        <option value="Africa/Nairobi">Nairobi 🇰🇪</option>
+        <option value="Africa/Ndjamena">N'Djamena 🇹🇩</option>
+        <option value="Africa/Ouagadougou">Ouagadougou 🇧🇫</option>
+        <option value="Asia/Tokyo">Osaka 🇯🇵</option>
+        <option value="Indian/Mauritius">Port Louis 🇲🇺</option>
+        <option value="Pacific/Port_Moresby">Port Moresby 🇵🇬</option>
+        <option value="Africa/Sao_Tome">São Tomé 🇸🇹</option>
+        <option value="Asia/Seoul">Seoul 🇰🇷</option>
+        <option value="Singapore">Singapore 🇸🇬</option>
+        <option value="Asia/Taipei">Taipei 🇹🇼</option>
+        <option value="Africa/Tripoli">Tripoli 🇱🇾</option>
+        <option value="Africa/Windhoek">Windhoek 🇳🇦</option>
+        <option value="Africa/Douala">Yaoundé 🇨🇲</option>
       </select>
 
+     <div id="chosencity">
       <div class="city" id="cityone">
         <h2>Taipei 🇹🇼</h2>
         <div class="time">20:05:15 <small>PM</small></div>
@@ -57,6 +62,7 @@
         <div class="time">20:05:15 <small>PM</small></div>
       </div>
       <div class="date">8 November 2025</div>
+    </div>
     </div>
 
     <footer>

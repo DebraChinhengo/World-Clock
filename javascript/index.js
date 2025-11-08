@@ -1,35 +1,68 @@
+let selectedCityTimezone = null;
+
 function updateCityTimes() {
   // === cityone ===
-  const cityoneElement = document.querySelector("#cityone");
-  const headingOne = cityoneElement.querySelector("h2");
-  const timeOne = cityoneElement.querySelector(".time");
-  const dateOne = document.querySelectorAll(".date")[0];
+  let cityoneElement = document.querySelector("#cityone");
+  let headingOne = cityoneElement.querySelector("h2");
+  let timeOne = cityoneElement.querySelector(".time");
+  let dateOne = document.querySelectorAll(".date")[0];
 
-  const cityoneTime = moment().tz("America/Havana"); // Cuba timezone
+  let cityoneTime;
+  let cityLabel;
 
-  headingOne.innerHTML = "Cuba 🇨🇺";
-  timeOne.innerHTML = `${cityoneTime.format(
-    "h:mm:ss"
-  )} <small>${cityoneTime.format("A")}</small>`;
+  if (selectedCityTimezone) {
+    cityoneTime = moment().tz(selectedCityTimezone.timezone);
+    cityLabel = selectedCityTimezone.label;
+  } else {
+    cityoneTime = moment().tz("America/Havana");
+    cityLabel = "Cuba 🇨🇺";
+  }
+
+  headingOne.innerHTML = cityLabel;
+  timeOne.innerHTML =
+    cityoneTime.format("h:mm:ss") +
+    " <small>" +
+    cityoneTime.format("A") +
+    "</small>";
   dateOne.innerHTML = cityoneTime.format("D MMMM YYYY");
 
   // === citytwo ===
-  const citytwoElement = document.querySelector("#citytwo");
-  const headingTwo = citytwoElement.querySelector("h2");
-  const timeTwo = citytwoElement.querySelector(".time");
-  const dateTwo = document.querySelectorAll(".date")[1];
+  let citytwoElement = document.querySelector("#citytwo");
+  let headingTwo = citytwoElement.querySelector("h2");
+  let timeTwo = citytwoElement.querySelector(".time");
+  let dateTwo = document.querySelectorAll(".date")[1];
 
-  const citytwoTime = moment().tz("America/Mexico_City"); // Mexico City timezone
+  let citytwoTime = moment().tz("America/Mexico_City");
 
-  headingTwo.innerHTML = "Mexico City 🇲🇽";
-  timeTwo.innerHTML = `${citytwoTime.format(
-    "h:mm:ss"
-  )} <small>${citytwoTime.format("A")}</small>`;
+  headingTwo.innerHTML = "Rio de Janeiro 🇧🇷";
+  timeTwo.innerHTML =
+    citytwoTime.format("h:mm:ss") +
+    " <small>" +
+    citytwoTime.format("A") +
+    "</small>";
   dateTwo.innerHTML = citytwoTime.format("D MMMM YYYY");
 }
 
-// Initial call
-updateCityTimes();
+// === Event Listener for City Selection ===
+function updatecityone(event) {
+  let cityTimezone = event.target.value;
+  if (!cityTimezone) {
+    selectedCityTimezone = null;
+    return;
+  }
 
-// Update every second
+  let selectedText = event.target.options[event.target.selectedIndex].text;
+
+  selectedCityTimezone = {
+    timezone: cityTimezone,
+    label: selectedText,
+  };
+}
+
+// Attach the event listener
+let selectCityElement = document.querySelector("#selectcity");
+selectCityElement.addEventListener("change", updatecityone);
+
+// Initial call and interval
+updateCityTimes();
 setInterval(updateCityTimes, 1000);
