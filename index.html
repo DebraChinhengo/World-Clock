@@ -7,54 +7,64 @@
     <title>World Clock-Debra Chinhengo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src = https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data.min.js"></script>
+   
   </head>
   <body>
     <div class="container">
       <h1>World Clock</h1>
-      <select>
-        <option value="">Select a city.... 🌍</option>
+           <select>
+        <option value="">Select a city... 🌍</option>
         <option value="">Abidjan 🇨🇮</option>
         <option value="">Addis Ababa 🇪🇹</option>
+        <option value="">Auckland 🇳🇿</option>
         <option value="">Bamako 🇲🇱</option>
+        <option value="">Brisbane 🇦🇺</option>
         <option value="">Cairo 🇪🇬</option>
         <option value="">Dar es Salaam 🇹🇿</option>
+        <option value="">Denpasar 🇮🇩</option>
         <option value="">Freetown 🇸🇱</option>
-        <option value="">Gaborone 🇧🇼</option>
-        <option value="">Harare 🇿🇼</option>
+        <option value="">Guangzhou 🇨🇳</option>
+        <option value="">Ho Chi Minh City 🇻🇳</option>
         <option value="">Johannesburg 🇿🇦</option>
-        <option value="">Kampala 🇺🇬</option>
+        <option value="">Kuala Lumpur 🇲🇾</option>
         <option value="">Lagos 🇳🇬</option>
-        <option value="">Malabo 🇬🇶</option>
+        <option value="">Manila 🇵🇭</option>
+        <option value="">Mumbai 🇮🇳</option>
         <option value="">Nairobi 🇰🇪</option>
         <option value="">N'Djamena 🇹🇩</option>
         <option value="">Ouagadougou 🇧🇫</option>
+        <option value="">Osaka 🇯🇵</option>
         <option value="">Port Louis 🇲🇺</option>
-        <option value="">Rabat 🇲🇦</option>
+        <option value="">Port Moresby 🇵🇬</option>
         <option value="">São Tomé 🇸🇹</option>
+        <option value="">Seoul 🇰🇷</option>
+        <option value="">Singapore 🇸🇬</option>
+        <option value="">Taipei 🇹🇼</option>
         <option value="">Tripoli 🇱🇾</option>
-        <option value="">Victoria 🇸🇨</option>
         <option value="">Windhoek 🇳🇦</option>
         <option value="">Yaoundé 🇨🇲</option>
       </select>
 
-      <div class="city">
+      <div class="city" id="cityone">
+        <h2>Taipei 🇹🇼</h2>
+        <div class="time">20:05:15 <small>PM</small></div>
+      </div>
+      <div class="date">8 November 2025</div>
+      <div class="city" id="citytwo">
         <h2>Addis Ababa 🇪🇹</h2>
         <div class="time">20:05:15 <small>PM</small></div>
       </div>
-      <div><div class="date">8 November 2025</div></div>
-
-      <div class="city">
-        <h2>Addis Ababa 🇪🇹</h2>
-        <div class="time">20:05:15 <small>PM</small></div>
-      </div>
-      <div><div class="dates">8 November 2025</div></div>
+      <div class="date">8 November 2025</div>
     </div>
+
     <footer>
       This project was coded with ❤️ by <strong>Debra Chinhengo</strong> and is
       <a href="https://github.com/DebraChinhengo/World-Clock" target="_blank">
-        open sourced on Github</a
-      >
+        open sourced on GitHub</a>.
     </footer>
+
     <script src="javascript/index.js"></script>
   </body>
 </html>
