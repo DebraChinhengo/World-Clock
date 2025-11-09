@@ -1,16 +1,17 @@
 let selectedCityTimezone = null;
 
 function updateCityTimes() {
-  // === cityone ===
+  // cityone
+
   let cityoneElement = document.querySelector("#cityone");
   let headingOne = cityoneElement.querySelector("h2");
   let timeOne = cityoneElement.querySelector(".time");
-  let dateOne = document.querySelectorAll(".date")[0];
+  let dateOne = document.querySelector(".date");
 
   let cityoneTime;
   let cityLabel;
 
-  if (selectedCityTimezone) {
+  if (selectedCityTimezone && selectedCityTimezone.timezone) {
     cityoneTime = moment().tz(selectedCityTimezone.timezone);
     cityLabel = selectedCityTimezone.label;
   } else {
@@ -26,15 +27,17 @@ function updateCityTimes() {
     "</small>";
   dateOne.innerHTML = cityoneTime.format("D MMMM YYYY");
 
-  // === citytwo ===
+  //citytwo
   let citytwoElement = document.querySelector("#citytwo");
   let headingTwo = citytwoElement.querySelector("h2");
   let timeTwo = citytwoElement.querySelector(".time");
-  let dateTwo = document.querySelectorAll(".date")[1];
+  let dateTwo = document.querySelector(".dates");
 
-  let citytwoTime = moment().tz("America/Mexico_City");
+  let localTimeZone = moment.tz.guess(); // Detect user's timezone
+  let citytwoTime = moment().tz(localTimeZone);
+  let citytwoLabel = "Current Location 📍";
 
-  headingTwo.innerHTML = "Rio de Janeiro 🇧🇷";
+  headingTwo.innerHTML = citytwoLabel;
   timeTwo.innerHTML =
     citytwoTime.format("h:mm:ss") +
     " <small>" +
@@ -43,7 +46,7 @@ function updateCityTimes() {
   dateTwo.innerHTML = citytwoTime.format("D MMMM YYYY");
 }
 
-// === Event Listener for City Selection ===
+// Event Listener for City Selection
 function updatecityone(event) {
   let cityTimezone = event.target.value;
   if (!cityTimezone) {
